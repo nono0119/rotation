@@ -14,8 +14,7 @@
 	const btnCopy = $('.btn--copy');
 	let spinCount = 0;
 
-	const listGift = [ // tùy chỉnh tỉ lệ quay :)), t nghĩ nên để tất cả là 0 trừ cái quay chúc bạn may mắn nên để là 100 :))) 
-		// set tỉ lệ sao cho tránh lỗ là được, t làm demo nên có thể chỉnh gì tùy m
+	const listGift = [ 
 		{ text: 'KEY TỪ THỜI ĐIỂM HIỆN TẠI TỚI 12H ĐÊM', percent: 7 / 100, }, { text: 'KEY 1 GIỜ', percent: 6 / 100, },
 		{ text: 'KEY 1 NGÀY', percent: 5 / 100, }, { text: 'KEY 1 TUẦN', percent: 4 / 100, },
 		{ text: 'KEY 2 TUẦN', percent: 3 / 100, }, { text: 'KEY 3 TUẦN', percent: 2 / 100, },
@@ -114,14 +113,11 @@
 	});
 
 	btnCopy.addEventListener('click', () => {
-		navigator.clipboard.writeText('XIE SPIN') // thay thế bằng cái khác key ( thay bằng api để tùy chỉnh )
+		navigator.clipboard.writeText('XIE SPIN') 
 			.then(() => alert('Đã sao chép key'))
 			.catch(err => console.error('Lỗi khi sao chép:', err));
 	});
 
-	spinCount = 0; // mặc định t set là 0, muốn test thì tăng lên ( thay bằng api để tùy chỉnh số lượt quay )
+	spinCount = 0;
 	updateSpinCount();  
 })();
-
-
-// Nhớ test đi test lại xem bug chỗ nào không để t fix cho 
